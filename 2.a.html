@@ -1,33 +1,14 @@
 <!DOCTYPE html>
 <html>
-    <style>
-        table,th,td{
-            border:1px solid black;
-            border-collapse:collapse;
-        }
-        th{
-            background-color: rgb(167, 88, 204);
-            color: white;
-        }
-        td{
-            color: rgb(248, 51, 77);
-            font-weight: bold;
-        }
-        caption {
-            color: rgb(55, 1, 252);
-            font-size:26px;
-        }
-    </style>
     <body>
         <h2>A Basic HTML Table</h2>
-        <table style="width:60%">
-        <caption>Country & Currency</caption>
+        <table border="1">
         <tr>
             <th colspan="2">COUNTRY & CAPITAL</th>
             <th>CURRENCY</th>
         </tr>
         <tr>
-            <td>India</td>
+            <td rowspan="1">India</td>
             <td>Delhi</td>
             <td>Rupees</td>
         </tr>
@@ -37,6 +18,5 @@
             <td>Japanese Yen</td>
         </tr>
         </table>
-        <p>This table was created using tags like table,th,tr,td,and attributes::border,rowspan,colspan.</p>
     </body>
 </html>
