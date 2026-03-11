@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Voter Registration</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Voter Name</th>
+                <th>Age</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="voterData">
+            </tbody>
+    </table>
+    <script>
+        let name = prompt("Enter your name:");
+        let ageInput = prompt("Enter your age:");
+        let age = Number(ageInput);
+        let canVote;
+        if (age >= 18) {
+            canVote = "Eligible to Vote";
+        } else {
+            canVote = "Not Eligible";
+        }
+        let tableBody = document.getElementById('voterData');
+        tableBody.innerHTML = `<tr>
+                <td>${name}</td>
+                <td>${age}</td>
+                <td>${canVote}</td>
+            </tr>`;
+    </script>
+</body>
+</html>
