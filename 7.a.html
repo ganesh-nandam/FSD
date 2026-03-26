@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple DOM Program</title>
+</head>
+<body>
+    <h1 id="main-title">Standard Heading</h1>
+    <p id="description">This is a simple paragraph before the DOM change.</p>
+    <button id="magic-btn">Run DOM Script</button>
+    <script>
+        const btn = document.getElementById('magic-btn');
+        const title = document.getElementById('main-title');
+        const desc = document.getElementById('description');
+        btn.addEventListener('click', () => {
+            title.innerText = "DOM Manipulation Success!";
+            desc.innerHTML = "You just used <strong>document.getElementById</strong> and <strong>innerText</strong>!";
+            title.style.color = "dodgerblue";
+            document.body.style.backgroundColor = "#e8f4f8";
+            console.log("Page Title: " + document.title);
+            console.log("Last Modified: " + document.lastModified);
+            btn.disabled = true;
+            btn.innerText = "Check Console (F12)";
+        });
+    </script>
+</body>
+</html>
