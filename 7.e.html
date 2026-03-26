@@ -1,0 +1,13 @@
+<div id="output"></div>
+<script>
+  let text = " Hello, JavaScript! "; 
+  let len = text.length; 
+  let clean = text.trim();
+  let upper = clean.toUpperCase();
+  let sub = clean.slice(0, 5);
+  let replaced = clean.replace("JavaScript", "World");
+
+  document.getElementById("output").innerHTML = 
+    `Length: ${len} <br> Clean: "${clean}" <br> Upper: ${upper} <br>` +
+    `Slice: ${sub} <br> Replace: ${replaced}`;
+</script>
