@@ -1,0 +1,9 @@
+<div id="out"></div>
+<script>
+  const radius = 5;
+  const area = Math.PI * Math.pow(radius, 2); 
+  const randomNum = Math.random() * 100;
+  const rounded = Math.round(randomNum);
+  const highest = Math.max(10, 20, 5, 50);
+  document.getElementById("out").innerHTML =  `Area: ${area.toFixed(2)} <br> Random: ${rounded} <br> Max: ${highest}`;
+</script>
