@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <input type="text" id="email" value="hello@example.com">
+  <button onclick="checkRegex()">Test Regex</button>
+  <pre id="output"></pre>
+  <script>
+    function checkRegex() {
+      const pattern = /([a-z]+)@([a-z]+\.[a-z]{2,})/gi;
+      const str = document.getElementById('email').value;
+      const result = pattern.exec(str);
+      const output = document.getElementById('output');
+      if (result) {
+        output.textContent = `Full Match: ${result[0]}\n` +
+          `User: ${result[1]}\n` +
+          `Domain: ${result[2]}\n` +
+          `Index: ${result.index}\n` +
+          `Global Flag: ${pattern.global}\n` +
+          `Last Index: ${pattern.lastIndex}`;
+      } else { output.textContent = "No match found."; }
+    }
+  </script>
+</body>
+</html>
