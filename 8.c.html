@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <div id="out"></div>
+  <script>
+    let res = "<b>For:</b> ";
+    for (let i = 1; i <= 10; i++) res += i + " ";
+    
+    res += "<br><b>While:</b> ";
+    let j = 1;
+    while (j <= 10) { res += j + " "; j++; }
+    
+    res += "<br><b>Do-While:</b> ";
+    let k = 1;
+    do { res += k + " "; k++; } while (k <= 10);
+    
+    document.getElementById("out").innerHTML = res;
+  </script>
+</body>
+</html>
