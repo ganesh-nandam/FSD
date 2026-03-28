@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <script>
+    const num = parseInt(prompt("Enter a 3-digit number:"));
+    let temp = num, sum = 0;
+    while (temp > 0) {
+      let digit = temp % 10;
+      sum += Math.pow(digit, 3);
+      temp = Math.floor(temp / 10);
+    }
+    const result = (sum === num) ? "is an ARMSTRONG NUMBER" : "is NOT an Armstrong number";
+    document.write(`<h2>${num} ${result}</h2>`);
+    alert(`${num} ${result}`);
+  </script>
+</body>
+</html>
