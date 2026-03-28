@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <h3>Current System data</h3>
+  <button onclick="showDate()">Refresh Clock</button>
+  <p id="display"></p>
+  <script>
+    function showDate() {
+      const now = new Date();
+      const format = {
+        Timestamp: now.getTime(),
+        Year: now.getFullYear(),
+        Month: now.getMonth() + 1,
+        Day: now.getDate(),
+        Time: `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`,
+        UTC_Offset: now.getTimezoneOffset(),
+        String: now.toDateString()
+      };
+      document.getElementById('display').innerHTML = 
+        Object.entries(format).map(([k, v]) => `<b>${k}:</b> ${v}`).join('<br>');
+    }
+    showDate();
+  </script>
+</body>
+</html>
