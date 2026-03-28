@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <script>
+    let amount = parseInt(prompt("Enter the deposit amount (Rs.):"));
+    let temp = amount, result = `Deposited: Rs. ${amount}<br>`;
+    const notes = [100, 50, 20, 10, 5, 2, 1];
+
+    notes.forEach(note => {
+      let count = Math.floor(temp / note);
+      if (count > 0) {
+        result += `${count} - ${note}'s<br>`;
+        temp %= note;
+      }
+    });
+
+    document.write(`<h2>Bank Denomination</h2>${result}`);
+    console.log(result.replace(/<br>/g, '\n'));
+  </script>
+</body>
+</html>
