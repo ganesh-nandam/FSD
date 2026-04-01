@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User-Defined Object Demo</title>
+</head>
+<body>
+  <h3>User-Defined Object Example</h3>
+  <button onclick="showStudent()">Display Student Info</button>
+  <button onclick="updateMarks()">Update Marks</button>
+  <script>
+    function Student(name, age, marks) {
+      this.name = name;    
+      this.age = age;     
+      this.marks = marks;    
+      this.display = function() {
+        return "Name: " + this.name +
+               "\nAge: " + this.age +
+               "\nMarks: " + this.marks;
+      };
+      this.getMarks = function() {
+        return this.marks;
+      };
+      this.setMarks = function(newMarks) {
+        this.marks = newMarks;
+      };
+    }
+    let student1 = new Student("GANESH", 20, 75, );
+    function showStudent() {
+      alert(student1.display());
+    }
+    function updateMarks() {
+      student1.setMarks(95);
+      alert("Marks updated!\n" + student1.display());
+    }
+  </script>
+</body>
+</html>
